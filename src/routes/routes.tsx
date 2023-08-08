@@ -7,6 +7,7 @@ import Checkout from '@/pages/Checkout';
 import ProductDetails from '@/pages/ProductDetails';
 import { LoginForm } from '@/components/LoginForm';
 import { SignupForm } from '@/components/SignUpForm';
+import PrivateRoute from './PrivateRoute';
 
 const routes = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const routes = createBrowserRouter([
       },
       {
         path: '/checkout',
-        element: <Checkout />,
+        element: (
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        ),
       },
     ],
   },
