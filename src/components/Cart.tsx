@@ -21,15 +21,8 @@ import {
 } from '@/redux/features/card/cardSlice';
 
 export default function Cart() {
-  const { products } = useAppSelector((state) => state.card);
+  const { products, total } = useAppSelector((state) => state.card);
   const dispatch = useAppDispatch();
-
-  //! Dummy data
-
-  // const products: IProduct[] = [];
-  const total = 0;
-
-  //! **
 
   return (
     <Sheet>
