@@ -33,7 +33,7 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
   const navigate = useNavigate();
 
   const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
+    console.log('data', data);
 
     dispatch(loginUser({ email: data.email, password: data.password }));
   };
