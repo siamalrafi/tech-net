@@ -12,8 +12,12 @@ import {
 import { HiOutlineSearch } from 'react-icons/hi';
 import Cart from '../components/Cart';
 import logo from '../assets/images/technet-logo.png';
+import { useAppDispatch } from '@/redux/hooks';
+import { logoutUser } from '@/redux/features/users/usersSlice';
 
 export default function Navbar() {
+  const dispatch = useAppDispatch();
+
   return (
     <nav className="w-full h-16 fixed top backdrop-blur-lg z-10">
       <div className="h-full w-full bg-white/60">
@@ -73,8 +77,11 @@ export default function Navbar() {
                         Register{' '}
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem className="cursor-pointer">
-                      Subscription
+                    <DropdownMenuItem
+                      onClick={() => dispatch(logoutUser())}
+                      className="cursor-pointer"
+                    >
+                      Logout
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
