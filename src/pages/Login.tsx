@@ -28,7 +28,7 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
   };
 
   return (
-    <div className={cn('grid gap-6', className)} {...props}>
+    <div className={cn(' grid gap-6 w-52 h-52', className)} {...props}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-2">
           <div className="grid gap-1">
@@ -58,6 +58,7 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
           <Button>Login with email</Button>
         </div>
       </form>
+
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
