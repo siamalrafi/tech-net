@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 
 export default function ProductDetails() {
   const { id } = useParams();
-  console.log(id);
 
   const { data: product, isLoading, error } = useSingleProductQuery(id);
   console.log('12', product);
@@ -28,7 +27,7 @@ export default function ProductDetails() {
           <Button>Add to cart</Button>
         </div>
       </div>
-      <ProductReview />
+      <ProductReview id={id!} />
     </>
   );
 }
