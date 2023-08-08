@@ -1,12 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '@/App';
-import Login from '@/pages/Login';
 import NotFound from '@/pages/NotFound';
 import Home from '@/pages/Home';
 import Products from '@/pages/Products';
 import Checkout from '@/pages/Checkout';
-import Signup from '@/pages/Signup';
 import ProductDetails from '@/pages/ProductDetails';
+import { LoginForm } from '@/components/LoginForm';
+import { SignupForm } from '@/components/SignUpForm';
 
 const routes = createBrowserRouter([
   {
@@ -33,11 +33,11 @@ const routes = createBrowserRouter([
   },
   {
     path: '/login',
-    element: <Login />,
+    element: <LoginForm />,
   },
   {
     path: '/signup',
-    element: <Signup />,
+    element: <SignupForm />,
   },
   {
     path: '*',
