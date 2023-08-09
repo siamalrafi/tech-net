@@ -28,7 +28,6 @@ export default function Home() {
           <img src={banner} alt="" />
         </div>
       </div>
-
       <div className="mb-20 ">
         <div>
           <img className="mx-auto" src={hero} alt="" />
@@ -42,13 +41,11 @@ export default function Home() {
           </Button>
         </div>
       </div>
-
       <Header />
       <Hero12 />
       <Feedback />
       {/* this was main page */}
-
-      <Footer />
+      <Footer />{' '}
     </>
   );
 }
