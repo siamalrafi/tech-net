@@ -1,82 +1,87 @@
-'use client';
-
-import * as React from 'react';
-
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { useForm } from 'react-hook-form';
-import { FcGoogle } from 'react-icons/fc';
-
-type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
-
-interface LoginFormInputs {
-  email: string;
-  password: string;
-}
-
-export function LoginForm({ className, ...props }: UserAuthFormProps) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<LoginFormInputs>();
-
-  const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
-  };
+export default function Login() {
+  let required: boolean;
 
   return (
-    <div className={cn(' grid gap-6 w-52 h-52', className)} {...props}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid gap-2">
-          <div className="grid gap-1">
-            <Label className="sr-only" htmlFor="email">
-              Email
-            </Label>
-            <Input
-              id="email"
-              placeholder="name@example.com"
-              type="email"
-              autoCapitalize="none"
-              autoComplete="email"
-              autoCorrect="off"
-              {...register('email', { required: 'Email is required' })}
-            />
-            {errors.email && <p>{errors.email.message}</p>}
-            <Input
-              id="password"
-              placeholder="your password"
-              type="password"
-              autoCapitalize="none"
-              autoComplete="password"
-              {...register('password', { required: 'Password is required' })}
-            />
-            {errors.password && <p>{errors.password.message}</p>}
+    <div>
+      <section className="px-4 py-24 mx-auto max-w-7xl">
+        <div className="grid items-center w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-11 lg:gap-24 xl:w-11/12">
+          <div className="col-auto text-center md:col-span-7 lg:text-left">
+            <h1 className="mb-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl md:leading-none tracking-none md:tracking-tight">
+              Ready to start your journey?
+            </h1>
+            <p className="mb-10 text-lg font-light text-gray-500 md:text-xl md:tracking-relaxed md:mb-4">
+              Low-latency voice and video feels like you’re in the same room.
+              Wave hello over video, watch friends stream their games, or gather
+              up and have a drawing session with screen share.
+            </p>
           </div>
-          <Button>Login with email</Button>
+          <div className="col-auto md:col-span-4">
+            <form className="mb-6 border-0 rounded-lg shadow-xl card">
+              <div className="justify-center pb-0 text-gray-700 border-0 card-header">
+                <p className="pt-2">Start talking now</p>
+              </div>
+              <div className="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
+                <label className="flex">
+                  <span className="sr-only">First Name</span>
+                  <input
+                    className="mt-0 form-input"
+                    type="text"
+                    placeholder="First Name"
+                    required={true}
+                  />
+                </label>
+                <label className="flex">
+                  <span className="sr-only">Email Address</span>
+                  <input
+                    className="mt-0 form-input"
+                    type="email"
+                    placeholder="Email Address"
+                    required={true}
+                  />
+                </label>
+                <label className="flex">
+                  <span className="sr-only">Password</span>
+                  <input
+                    className="mt-0 form-input"
+                    type="password"
+                    placeholder="Password"
+                    required={true}
+                  />
+                </label>
+                <button className="w-full py-2 btn btn-primary" type="submit">
+                  Sign up for free
+                </button>
+              </div>
+              <div className="px-6 py-4 card-body">
+                <button className="w-full py-2 btn btn-icon btn-google">
+                  <svg
+                    className="mr-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="transparent"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z" />
+                  </svg>
+                  Continue with Google
+                </button>
+              </div>
+            </form>
+            <p className="text-xs text-center text-gray-600">
+              By signing up you agree to our{' '}
+              <a href="#" className="text-primary">
+                Terms of Service
+              </a>
+            </p>
+          </div>
         </div>
-      </form>
-
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
-          </span>
-        </div>
-      </div>
-      <Button
-        variant="outline"
-        type="button"
-        className="flex items-center justify-between"
-      >
-        <p>Google</p>
-        <FcGoogle />
-      </Button>
+      </section>
     </div>
   );
 }

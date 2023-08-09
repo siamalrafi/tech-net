@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from '@/layouts/Footer';
 import Header from '../components/Header';
 import Hero12 from '@/components/Hero2';
+import Feedback from '@/components/Feedback';
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
 
       <Header />
       <Hero12 />
+      <Feedback />
       {/* this was main page */}
 
       <Footer />
