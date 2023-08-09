@@ -11,7 +11,7 @@ export default function Footer() {
         <div>
           <img className="h-10" src={logo} alt="Logo" />
         </div>
-        <div className="flex gap-20">
+        <div className="flex lg:gap-20 md:gap-7 sm:gap-7">
           <ul className="space-y-2">
             <li>Upcoming</li>
             <li>Shipping</li>

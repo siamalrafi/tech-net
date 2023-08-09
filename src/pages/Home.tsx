@@ -3,13 +3,15 @@ import banner from '@/assets/images/banner.png';
 import hero from '@/assets/images/hero.png';
 import { Link } from 'react-router-dom';
 import Footer from '@/layouts/Footer';
+import Header from '../components/Header';
+import Hero12 from '@/components/Hero2';
 
 export default function Home() {
   return (
     <>
       <div className="flex justify-between items-center h-[calc(100vh-80px)] max-w-7xl mx-auto ">
         <div>
-          <h1 className="text-6xl font-black text-primary mb-2">
+          <h1 className="text-6xl font-black text-primary ">
             HAYLOU <br /> SOLAR PLUSE
           </h1>
           <p className="text-secondary font-semibold text-xl">
@@ -25,7 +27,8 @@ export default function Home() {
           <img src={banner} alt="" />
         </div>
       </div>
-      <div className="mb-96">
+
+      <div className="mb-20 ">
         <div>
           <img className="mx-auto" src={hero} alt="" />
         </div>
@@ -38,6 +41,11 @@ export default function Home() {
           </Button>
         </div>
       </div>
+
+      <Header />
+      <Hero12 />
+      {/* this was main page */}
+
       <Footer />
     </>
   );
