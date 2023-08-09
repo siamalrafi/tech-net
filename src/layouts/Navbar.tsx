@@ -25,8 +25,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between w-full md:max-w-7xl h-full mx-auto ">
           <div>
             <Link to="/">
-              {' '}
-              <img className="h-8" src={logo} alt="log" />{' '}
+              <img className="h-8" src={logo} alt="log" />
             </Link>
           </div>
           <div>
@@ -89,7 +88,7 @@ export default function Navbar() {
                         </Link>
                         <Link to="/signup">
                           <DropdownMenuItem className="cursor-pointer">
-                            Register{' '}
+                            Register
                           </DropdownMenuItem>
                         </Link>
                       </>
