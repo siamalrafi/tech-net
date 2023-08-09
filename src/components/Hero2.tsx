@@ -22,10 +22,10 @@ const Hero12 = () => {
             </p>
             {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row items-center">
-              <button className="m-1.5 py-2.5 px-5 rounded-md bg-[#3a71ff] text-white font-semibold uppercase hover:bg-teal-400">
+              <button className="m-1.5 py-2.5 px-5 rounded-md bg-[#3a71ff] text-white font-semibold uppercase hover:[#3a71ff]">
                 Start your journey
               </button>
-              <button className="m-1.5 py-2.5 px-5 rounded-md border-2 border-gray-300 text-gray-400 font-semibold uppercase hover:text-teal-400 hover:border-teal-400">
+              <button className="m-1.5 py-2.5 px-5 rounded-md border-2 border-gray-300 text-gray-400 font-semibold uppercase  hover:border-[#3a71ff]">
                 Take a test drive
               </button>
             </div>

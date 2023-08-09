@@ -36,7 +36,7 @@ export default function Cart() {
           <h1>Total: {total.toFixed(2)}</h1>
         </SheetHeader>
         <div className="space-y-5">
-          {products.map((product) => (
+          {products?.map((product) => (
             <div
               className="border h-44 p-5 flex justify-between rounded-md"
               key={product.name}

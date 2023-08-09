@@ -1,6 +1,8 @@
 [
   {
-    "_id": 1,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145a"
+    },
     "name": "Haylou GST",
     "image": "https://live.staticflickr.com/65535/52953899202_478089ea5f_h.jpg",
     "price": 31.99,
@@ -16,7 +18,9 @@
     "rating": 4
   },
   {
-    "_id": 2,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145b"
+    },
     "name": "Haylou GS",
     "image": "https://live.staticflickr.com/65535/52954632614_2db2bed3a7_h.jpg",
     "price": 32.38,
@@ -32,7 +36,9 @@
     "rating": 3
   },
   {
-    "_id": 3,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145c"
+    },
     "name": "Haylou Solar Plus RT3",
     "image": "https://live.staticflickr.com/65535/52953899127_38e776f3f7_h.jpg",
     "price": 48.79,
@@ -47,7 +53,9 @@
     "rating": 5
   },
   {
-    "_id": 4,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145d"
+    },
     "name": "Haylou RT2",
     "image": "https://live.staticflickr.com/65535/52954494936_efd69e2df9_h.jpg",
     "price": 38.99,
@@ -62,7 +70,9 @@
     "rating": 2
   },
   {
-    "_id": 5,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145e"
+    },
     "name": "Haylou RS4 Plus",
     "image": "https://live.staticflickr.com/65535/52953899137_072c5c4ffc_h.jpg",
     "price": 54.84,
@@ -78,7 +88,9 @@
     "rating": 4
   },
   {
-    "_id": 6,
+    "_id": {
+      "$oid": "64d3e11ff881425aebe2145f"
+    },
     "name": "Haylou RS3",
     "image": "https://live.staticflickr.com/65535/52953899132_fead48e579_h.jpg",
     "price": 63.07,
@@ -92,5 +104,364 @@
     ],
     "status": true,
     "rating": 5
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21463"
+    },
+    "name": "Omega Seamaster",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/Fitbit-Versa-3-Smart-Watch-Black-9119.jpg",
+    "price": 799.99,
+    "features": [
+      "Automatic movement",
+      "Stainless steel case",
+      "Water-resistant up to 300m",
+      "Sapphire crystal",
+      "Date function",
+      "Luminous hands"
+    ],
+    "status": true,
+    "rating": 4.5
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21464"
+    },
+    "name": "Rolex Submariner",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/2645-51688.jpg",
+    "price": 899.99,
+    "features": [
+      "Automatic movement",
+      "Stainless steel case",
+      "Water-resistant up to 300m",
+      "Ceramic bezel",
+      "Date function",
+      "Luminous hands"
+    ],
+    "status": false,
+    "rating": 4.8
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21465"
+    },
+    "name": "TAG Heuer Carrera",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/2645-89470.jpg",
+    "price": 699.99,
+    "features": [
+      "Automatic movement",
+      "Stainless steel case",
+      "Sapphire crystal",
+      "Chronograph function",
+      "Date function",
+      "Luminous hands"
+    ],
+    "status": true,
+    "rating": 4.7
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21466"
+    },
+    "name": "Apple Watch Series 8",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/Fitbit-Versa-3-Smart-Watch-Thistle-9004.jpg",
+    "price": 499.99,
+    "features": [
+      "Always-on Retina display",
+      "ECG and blood oxygen monitoring",
+      "Fitness tracking",
+      "Water-resistant",
+      "WatchOS app ecosystem",
+      "Multiple watch faces"
+    ],
+    "status": true,
+    "rating": 4.9
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21467"
+    },
+    "name": "Seiko Prospex",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/3631-23708.jpg",
+    "price": 299.99,
+    "features": [
+      "Automatic movement",
+      "Stainless steel case",
+      "Dive watch",
+      "Luminous hands and markers",
+      "Date function",
+      "Water-resistant up to 200m"
+    ],
+    "status": false,
+    "rating": 4.4
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21468"
+    },
+    "name": "Watch X1",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/Fitbit-Versa-3-Smart-Watch-Black-9119.jpg",
+    "price": 49.99,
+    "features": [
+      "1.5'' OLED display",
+      "Support 8 workout modes",
+      "Heart rate monitoring",
+      "Sleep tracking",
+      "IP67 waterproof",
+      "15 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.3
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe21469"
+    },
+    "name": "Watch Y2",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/2645-51688.jpg",
+    "price": 69.99,
+    "features": [
+      "1.3'' TFT display",
+      "Support 10 workout modes",
+      "SpO₂ monitoring",
+      "Intelligent sleep analysis",
+      "IP68 waterproof",
+      "18 days of battery life"
+    ],
+    "status": false,
+    "rating": 4.6
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe2146a"
+    },
+    "name": "Watch Z3",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/2645-89470.jpg",
+    "price": 59.99,
+    "features": [
+      "1.4'' AMOLED display",
+      "Support 15 workout modes",
+      "Advanced heart rate tracking",
+      "Sleep stage analysis",
+      "5ATM waterproof",
+      "21 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.8
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe2146b"
+    },
+    "name": "Watch P4",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/Fitbit-Versa-3-Smart-Watch-Thistle-9004.jpg",
+    "price": 44.99,
+    "features": [
+      "1.6'' LCD display",
+      "Support 12 workout modes",
+      "Heart rate and SpO₂ monitoring",
+      "Intelligent sleep analysis",
+      "IP68 waterproof",
+      "17 days of battery life"
+    ],
+    "status": false,
+    "rating": 4.2
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe2146c"
+    },
+    "name": "Watch Q5",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/3631-23708.jpg",
+    "price": 79.99,
+    "features": [
+      "1.2'' IPS display",
+      "Support 9 workout modes",
+      "Real-time heart rate monitoring",
+      "Intelligent sleep tracking",
+      "IP67 waterproof",
+      "14 days of battery life"
+    ],
+    "status": true,
+    "rating": 3.9
+  },
+  {
+    "_id": {
+      "$oid": "64d3e226f881425aebe2146d"
+    },
+    "name": "Watch R6",
+    "image": "https://adminapi.applegadgetsbd.com/storage/media/large/3333-96813.jpg",
+    "price": 54.99,
+    "features": [
+      "1.7'' AMOLED display",
+      "Support 14 workout modes",
+      "All-day heart rate and blood oxygen monitoring",
+      "Intelligent sleep analysis",
+      "5ATM waterproof",
+      "20 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.5
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe2146f"
+    },
+    "name": "Amazfit Bip U Pro",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/mi-amazfit-bip-u-pro-pink-smart-11666000122.webp",
+    "price": 59.99,
+    "features": [
+      "1.43'' HD display",
+      "Heart rate and SpO₂ monitoring",
+      "PAI health assessment",
+      "Sleep quality analysis",
+      "IP68 waterproof",
+      "9 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.6
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21470"
+    },
+    "name": "Xiaomi Imilab W01",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/xiaomi-imilab-w01-black-square-shape-smart-11656133628.webp",
+    "price": 45.99,
+    "features": [
+      "Square-shaped design",
+      "Heart rate monitoring",
+      "Blood pressure monitoring",
+      "Sleep analysis",
+      "IP68 waterproof",
+      "7 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.3
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21471"
+    },
+    "name": "Xiaomi Imilab W01",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/xiaomi-imilab-w01-black-square-shape-smart-21656133628.webp",
+    "price": 48.99,
+    "features": [
+      "Square-shaped design",
+      "Heart rate monitoring",
+      "Blood pressure monitoring",
+      "Sleep analysis",
+      "IP68 waterproof",
+      "7 days of battery life"
+    ],
+    "status": false,
+    "rating": 3.9
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21472"
+    },
+    "name": "Amazfit GTR 3 Pro",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/mi-amazfit-gtr-3-pro-brown-leather-smart-11666420505.webp",
+    "price": 149.99,
+    "features": [
+      "Circular AMOLED display",
+      "Health and fitness tracking",
+      "Built-in GPS",
+      "Swim-proof design",
+      "14 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.8
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21473"
+    },
+    "name": "DIZO Watch 2 Sports",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/dizo-watch-2-sports-42mm-blue-smart-11678000430.webp",
+    "price": 39.99,
+    "features": [
+      "42mm dial size",
+      "Fitness tracking",
+      "Heart rate monitoring",
+      "Sleep analysis",
+      "5ATM waterproof",
+      "12 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.1
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21474"
+    },
+    "name": "Xiaomi MiBro Lite",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/xiaomi-mibro-lite-43mm-amoled-hd-black-smart-11657198231.webp",
+    "price": 54.99,
+    "features": [
+      "43mm AMOLED HD display",
+      "Fitness tracking",
+      "Heart rate monitoring",
+      "Sleep analysis",
+      "IP68 waterproof",
+      "14 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.5
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21475"
+    },
+    "name": "Xiaomi MiBro X1",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/xiaomi-mibro-x1-amoled-hd-black-smart-watch-11646639458.webp",
+    "price": 69.99,
+    "features": [
+      "AMOLED HD display",
+      "Fitness tracking",
+      "Heart rate monitoring",
+      "Sleep analysis",
+      "IP68 waterproof",
+      "15 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.2
+  },
+  {
+    "_id": {
+      "$oid": "64d3e431f881425aebe21476"
+    },
+    "name": "Huawei Watch GT3 Classic",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/huawei-watch-gt3-classic-46mm-pebble-brown-smart-11657688503.webp",
+    "price": 129.99,
+    "features": [
+      "46mm circular dial",
+      "Health and fitness tracking",
+      "Heart rate monitoring",
+      "Sleep analysis",
+      "5ATM waterproof",
+      "14 days of battery life"
+    ],
+    "status": false,
+    "rating": 3.7
+  },
+  {
+    "_id": {
+      "$oid": "64d3e452f881425aebe21478"
+    },
+    "name": "Xiaomi Imilab W01",
+    "image": "https://www.cloud.ryanscomputers.com/cdn/products/medium/xiaomi-imilab-w01-black-square-shape-smart-11656133628.webp",
+    "price": 45.99,
+    "features": [
+      "Square-shaped design",
+      "Heart rate monitoring",
+      "Blood pressure monitoring",
+      "Sleep analysis",
+      "IP68 waterproof",
+      "7 days of battery life"
+    ],
+    "status": true,
+    "rating": 4.3
   }
 ]

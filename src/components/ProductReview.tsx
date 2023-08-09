@@ -60,7 +60,7 @@ export default function ProductReview({ id }: IProps) {
         </Button>
       </form>
       <div className="mt-10">
-        {data?.comments.map((comment: string, index: string) => (
+        {data?.comments?.map((comment: string, index: string) => (
           <div key={index} className="flex gap-3 items-center mb-5">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />

@@ -93,7 +93,7 @@ export default function Checkout() {
         <h1 className="mb-2">Order Summery</h1>
         <div className="border border-gray-300 rounded-md h-[60vh] p-10 flex flex-col">
           <div className="flex-grow  mb-2 space-y-2 overflow-auto">
-            {products.map((product) => (
+            {products?.map((product) => (
               <div className="flex justify-between items-center bg-gray-100 p-1 rounded-lg">
                 <div className="flex items-center">
                   <img

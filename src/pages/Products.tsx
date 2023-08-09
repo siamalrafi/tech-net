@@ -21,7 +21,7 @@ export default function Products() {
   // }, []);
 
   const { data, isLoading, error } = useGetProductsQuery(undefined);
-  console.log(data);
+  console.log('data', data);
   console.log(error);
 
   const { status, priceRange } = useAppSelector((state) => state.product);
