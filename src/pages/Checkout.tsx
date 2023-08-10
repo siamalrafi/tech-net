@@ -13,7 +13,7 @@ export default function Checkout() {
   const { products } = useAppSelector((state) => state.card);
 
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-80px)] gap-10 text-primary">
+    <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 my-20 mx-16 justify-center items-center h-[calc(100vh-80px)] gap-10 text-primary">
       <div className="max-w-3xl w-full">
         <h1 className="mb-2">Delivery Information</h1>
         <div className="h-[60vh] border border-gray-300 rounded-md p-10 overflow-auto">
@@ -89,7 +89,7 @@ export default function Checkout() {
           </div>
         </div>
       </div>
-      <div className="max-w-lg w-full">
+      <div className="max-w-lg w-full mp-20">
         <h1 className="mb-2">Order Summery</h1>
         <div className="border border-gray-300 rounded-md h-[60vh] p-10 flex flex-col">
           <div className="flex-grow  mb-2 space-y-2 overflow-auto">

@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import banner from '@/assets/images/banner.png';
 import hero from '@/assets/images/hero.png';
 import { Link } from 'react-router-dom';
-import Footer from '@/layouts/Footer';
 import Header from '../components/Header';
 import Hero12 from '@/components/Hero2';
 import Feedback from '@/components/Feedback';
@@ -45,7 +44,6 @@ export default function Home() {
       <Hero12 />
       <Feedback />
       {/* this was main page */}
-      <Footer />{' '}
     </>
   );
 }
