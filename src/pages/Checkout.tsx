@@ -99,7 +99,7 @@ export default function Checkout() {
                   <img
                     src={product.image}
                     className="h-[82px] rounded-md mr-2"
-                    alt=""
+                    alt="img"
                   />
                   <div>
                     <h1 className="text-lg mb-2">{product.name}</h1>

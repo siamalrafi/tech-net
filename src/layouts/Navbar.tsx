@@ -14,6 +14,7 @@ import Cart from '../components/Cart';
 import logo from '../assets/images/technet-logo.png';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { logoutUser } from '@/redux/features/users/usersSlice';
+import { InputWithButton } from '@/components/ui/SearchBar';
 
 export default function Navbar() {
   const dispatch = useAppDispatch();
@@ -45,10 +46,13 @@ export default function Navbar() {
                   <Link to="/checkout">Checkout</Link>
                 </Button>
               </li>
-              <li>
+              {/* <li>
                 <Button variant="ghost">
                   <HiOutlineSearch size="25" />
                 </Button>
+              </li> */}
+              <li>
+                <InputWithButton />
               </li>
               <li>
                 <Cart />
