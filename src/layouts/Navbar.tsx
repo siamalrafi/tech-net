@@ -15,7 +15,6 @@ import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { logoutUser } from '@/redux/features/users/usersSlice';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { InputWithButton } from '@/components/ui/SearchBar';
 import { useState } from 'react';
 import { setSearchQuery } from '../redux/features/products/searchSlice';
 

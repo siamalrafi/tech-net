@@ -4,6 +4,7 @@ const productApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: () => '/product',
+      // query: (page, pageSize) => `/product?page=${page}&pageSize=${pageSize}`
     }),
     singleProduct: builder.query({
       query: (id) => `/product/${id}`,
