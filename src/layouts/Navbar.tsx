@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
-import { Button } from '../components/ui/button';
 import { DropdownMenuSeparator } from '../components/ui/dropdown-menu';
 import { DropdownMenuLabel } from '../components/ui/dropdown-menu';
 import {
@@ -14,11 +13,21 @@ import Cart from '../components/Cart';
 import logo from '../assets/images/technet-logo.png';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { logoutUser } from '@/redux/features/users/usersSlice';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { InputWithButton } from '@/components/ui/SearchBar';
+import { useState } from 'react';
+import { setSearchQuery } from '../redux/features/products/searchSlice';
 
 export default function Navbar() {
   const dispatch = useAppDispatch();
   const { user } = useAppSelector((state) => state.user);
+  const [searchQuery, setSearchQueryLocal] = useState('');
+
+  const handleSearch = () => {
+    dispatch(setSearchQuery(searchQuery));
+    setSearchQueryLocal('');
+  };
 
   return (
     <nav className="w-full h-16 fixed top backdrop-blur-lg z-10">
@@ -52,8 +61,26 @@ export default function Navbar() {
                 </Button>
               </li> */}
               <li>
-                <InputWithButton />
+                <div className="flex w-full max-w-sm items-center space-x-2">
+                  <Input
+                    onChange={(e) => setSearchQueryLocal(e.target.value)}
+                    type="Search your Product"
+                    placeholder="Search Your Product"
+                  />
+                  <Button type="submit" onClick={handleSearch}>
+                    <HiOutlineSearch size="25" />
+                  </Button>
+                </div>
               </li>
+              {/* <li>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQueryLocal(e.target.value)}
+                />
+                <button onClick={handleSearch}>Search</button>
+              </li> */}
+
               <li>
                 <Cart />
               </li>
@@ -74,7 +101,7 @@ export default function Navbar() {
                     <DropdownMenuItem className="cursor-pointer">
                       Billing
                     </DropdownMenuItem>
-                    {user.email ? (
+                    {user?.email ? (
                       <>
                         <DropdownMenuItem
                           onClick={() => dispatch(logoutUser())}

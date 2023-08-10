@@ -10,9 +10,12 @@ import {
 } from '@/redux/features/products/productsSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { IProduct } from '@/types/globalTypes';
-import { Key, useEffect, useState } from 'react';
+import { Key } from 'react';
 
 export default function Products() {
+  const searchQuery = useAppSelector((state) => state.search.searchQuery);
+  console.log('searchQuery', searchQuery);
+
   const { toast } = useToast();
   const { data, isLoading, error } = useGetProductsQuery(undefined);
   console.log('data', data);
@@ -69,11 +72,13 @@ export default function Products() {
       </div>
 
       <div className="col-span-9 grid grid-cols-3 gap-10 pb-20">
-        {productsData?.map(
-          (product: IProduct, index: Key | null | undefined) => (
-            <ProductCard key={index} product={product} />
+        {productsData
+          ?.filter((product: IProduct) =>
+            product.name.toLowerCase().includes(searchQuery.toLowerCase())
           )
-        )}
+          .map((product: IProduct, index: Key | null | undefined) => (
+            <ProductCard key={index} product={product} />
+          ))}
       </div>
     </div>
   );
