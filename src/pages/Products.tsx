@@ -14,15 +14,8 @@ import { Key, useEffect, useState } from 'react';
 
 export default function Products() {
   const { toast } = useToast();
-  // useEffect(() => {
-  //   fetch('./data.json')
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data));
-  // }, []);
-
   const { data, isLoading, error } = useGetProductsQuery(undefined);
   console.log('data', data);
-  console.log(error);
 
   const { status, priceRange } = useAppSelector((state) => state.product);
   const dispatch = useAppDispatch();
@@ -48,8 +41,8 @@ export default function Products() {
   }
 
   return (
-    <div className="grid grid-cols-12 max-w-7xl mx-auto relative ">
-      <div className="col-span-3 z mr-10 space-y-5 border rounded-2xl border-gray-200/80 p-5 self-start sticky top-16 h-[calc(100vh-80px)]">
+    <div className="grid lg:grid-cols-12 sm:grid-cols-6 max-w-7xl ">
+      <div className="col-span-3 z mr-10 space-y-5 border rounded-2xl border-gray-200/80 p-5 self-start sticky top-16 lg:h-[calc(100vh-80px)]">
         <div>
           <h1 className="text-2xl uppercase">Availability</h1>
           <div
@@ -74,6 +67,7 @@ export default function Products() {
           <div>From 0$ To {priceRange}$</div>
         </div>
       </div>
+
       <div className="col-span-9 grid grid-cols-3 gap-10 pb-20">
         {productsData?.map(
           (product: IProduct, index: Key | null | undefined) => (
