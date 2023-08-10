@@ -11,6 +11,11 @@ import { useState } from 'react';
 export default function Checkout() {
   const [scheduled, setScheduled] = useState<boolean>(false);
   const { products } = useAppSelector((state) => state.card);
+  const totalProductPrice = products.reduce((total, product) => {
+    return total + product.price * product.quantity!;
+  }, 0);
+
+  const Price: number = totalProductPrice + 77.9 + 4.5;
 
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 my-20 mx-16 justify-center items-center h-[calc(100vh-80px)] gap-10 text-primary">
@@ -123,8 +128,9 @@ export default function Checkout() {
             </div>
             <div className="flex justify-between text-xl font-bold">
               <p>Total</p>
-              <p>81.95$</p>
+              <p>{Price.toFixed()}$</p>
             </div>
+
             <Button className="w-full">Checkout</Button>
           </div>
         </div>

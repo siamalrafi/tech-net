@@ -14,13 +14,10 @@ import { Key } from 'react';
 
 export default function Products() {
   const searchQuery = useAppSelector((state) => state.search.searchQuery);
-  console.log('searchQuery', searchQuery);
+  const { data, isLoading, error } = useGetProductsQuery(undefined);
+  const { status, priceRange } = useAppSelector((state) => state.product);
 
   const { toast } = useToast();
-  const { data, isLoading, error } = useGetProductsQuery(undefined);
-  console.log('data', data);
-
-  const { status, priceRange } = useAppSelector((state) => state.product);
   const dispatch = useAppDispatch();
 
   const handleSlider = (value: number[]) => {
@@ -84,7 +81,7 @@ export default function Products() {
           Products are large amounts of data. need to pagination. Her are the code for UI
           */}
 
-        <div className="flex justify-center sm:mx-52  lg:mx-96 md:mx-96  ">
+        <div className="flex justify-center sm:mx-60 lg:mx-96 md:mx-96  ">
           <nav className="" aria-label="Page navigation example">
             <ul className="flex list-style-none">
               <li className="page-item disabled">
