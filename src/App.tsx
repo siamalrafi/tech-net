@@ -8,6 +8,7 @@ import { auth } from './lib/firebase';
 
 function App() {
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(setLoading(true));
 
