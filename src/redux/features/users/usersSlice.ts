@@ -7,7 +7,6 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 import { GoogleAuthProvider } from 'firebase/auth';
-const googelProvider = new GoogleAuthProvider();
 
 interface IUserState {
   user: {

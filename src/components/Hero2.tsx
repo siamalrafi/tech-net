@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero12 = () => {
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center bg-gray-50 overflow-hidden">

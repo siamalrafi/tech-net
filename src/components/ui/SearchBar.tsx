@@ -1,12 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useGetProductsQuery } from '@/redux/features/products/productApi';
-import { useAppSelector } from '@/redux/hooks';
 import { useState } from 'react';
 import { HiOutlineSearch } from 'react-icons/hi';
 
 export function InputWithButton() {
-  const { data, isLoading, error } = useGetProductsQuery(undefined);
+  const { error } = useGetProductsQuery(undefined);
   const [search, setSearch] = useState('');
 
   console.log('data from serach', search, error);
