@@ -6,8 +6,8 @@ import Products from '@/pages/Products';
 import Checkout from '@/pages/Checkout';
 import ProductDetails from '@/pages/ProductDetails';
 import { LoginForm } from '@/components/LoginForm';
-import { SignupForm } from '@/components/SignUpForm';
 import PrivateRoute from './PrivateRoute';
+import { SignupForm } from '@/components/SignUpForm';
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +36,7 @@ const routes = createBrowserRouter([
       },
     ],
   },
+
   {
     path: '/login',
     element: <LoginForm />,

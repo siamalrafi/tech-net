@@ -22,15 +22,6 @@ export default function Login() {
               </div>
               <div className="px-6 py-4 space-y-4 border-b border-gray-200 card-body">
                 <label className="flex">
-                  <span className="sr-only">First Name</span>
-                  <input
-                    className="mt-0 form-input"
-                    type="text"
-                    placeholder="First Name"
-                    required={true}
-                  />
-                </label>
-                <label className="flex">
                   <span className="sr-only">Email Address</span>
                   <input
                     className="mt-0 form-input"
