@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
 import { createUser, googleSignUp } from '@/redux/features/users/usersSlice';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '@/redux/hooks';
 
 interface SignupFormInputs {
   email: string;
@@ -19,7 +19,7 @@ export function SignupForm() {
     formState: { errors },
   } = useForm<SignupFormInputs>();
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onSubmit = (data: SignupFormInputs) => {
     dispatch(createUser({ email: data.email, password: data.password }));

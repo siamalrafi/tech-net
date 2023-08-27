@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useForm } from 'react-hook-form';
@@ -8,14 +7,12 @@ import { useEffect } from 'react';
 import { loginUser } from '@/redux/features/users/usersSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
-type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
-
 interface LoginFormInputs {
   email: string;
   password: string;
 }
 
-export function LoginForm({ className, ...props }: UserAuthFormProps) {
+export function LoginForm() {
   const {
     register,
     handleSubmit,
