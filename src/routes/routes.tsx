@@ -5,9 +5,9 @@ import Home from '@/pages/Home';
 import Products from '@/pages/Products';
 import Checkout from '@/pages/Checkout';
 import ProductDetails from '@/pages/ProductDetails';
-import { LoginForm } from '@/components/LoginForm';
+import { LoginForm } from '@/components/Login';
 import PrivateRoute from './PrivateRoute';
-import { SignupForm } from '@/components/SignUpForm';
+import { SignupForm } from '@/components/SignUp';
 
 const routes = createBrowserRouter([
   {

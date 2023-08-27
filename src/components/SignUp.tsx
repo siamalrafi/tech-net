@@ -1,45 +1,37 @@
-import * as React from 'react';
-import { cn } from '@/lib/utils';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { createUser, googleSignUp } from '@/redux/features/users/usersSlice';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { useForm } from 'react-hook-form';
-import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import { loginUser } from '@/redux/features/users/usersSlice';
-import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
-type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
-
-interface LoginFormInputs {
+interface SignupFormInputs {
   email: string;
   password: string;
 }
 
-export function LoginForm({ className, ...props }: UserAuthFormProps) {
+export function SignupForm() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormInputs>();
+  } = useForm<SignupFormInputs>();
 
-  const { user, isLoading } = useAppSelector((state) => state.user);
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
 
-  const navigate = useNavigate();
-
-  const onSubmit = (data: LoginFormInputs) => {
-    console.log('data', data);
-
-    dispatch(loginUser({ email: data.email, password: data.password }));
+  const onSubmit = (data: SignupFormInputs) => {
+    dispatch(createUser({ email: data.email, password: data.password }));
+    navigate('/');
   };
 
-  useEffect(() => {
-    if (user.email && !isLoading) {
+  const handleGoogleSignUp = () => {
+    dispatch(googleSignUp());
+    setTimeout(() => {
       navigate('/');
-    }
-  }, [user.email, isLoading]);
+    }, 500000);
+  };
 
   return (
     <section className="px-4 py-24 mx-auto max-w-7xl">
@@ -66,13 +58,10 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
               <label className="flex">
                 <span className="sr-only">Email Address</span>
                 <Input
-                  id="email"
-                  placeholder="Email Address"
-                  type="email"
                   className="mt-0 form-input"
-                  autoCapitalize="none"
-                  autoComplete="email"
-                  autoCorrect="off"
+                  type="email"
+                  placeholder="Email Address"
+                  required={true}
                   {...register('email', { required: 'Email is required' })}
                 />
               </label>
@@ -80,12 +69,10 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
               <label className="flex">
                 <span className="sr-only">Password</span>
                 <Input
-                  id="password"
-                  placeholder="Password"
-                  type="password"
                   className="mt-0 form-input"
-                  autoCapitalize="none"
-                  autoComplete="password"
+                  type="password"
+                  placeholder="Password"
+                  required={true}
                   {...register('password', {
                     required: 'Password is required',
                   })}
@@ -97,19 +84,35 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
               </Button>
             </div>
             <div className="px-6 py-4 card-body">
-              <Button className="w-full py-2 btn btn-icon btn-google">
-                <FcGoogle className="mr-1" />
+              <Button
+                onClick={() => handleGoogleSignUp()}
+                className="w-full py-2 btn btn-icon btn-google"
+              >
+                <svg
+                  className="mr-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="transparent"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M20.283,10.356h-8.327v3.451h4.792c-0.446,2.193-2.313,3.453-4.792,3.453c-2.923,0-5.279-2.356-5.279-5.28	c0-2.923,2.356-5.279,5.279-5.279c1.259,0,2.397,0.447,3.29,1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233	c-4.954,0-8.934,3.979-8.934,8.934c0,4.955,3.979,8.934,8.934,8.934c4.467,0,8.529-3.249,8.529-8.934	C20.485,11.453,20.404,10.884,20.283,10.356z" />
+                </svg>
                 Continue with Google
               </Button>
             </div>
           </form>
           <p className="text-xs text-center text-gray-600">
-            <span>Don't Have Account?</span>{' '}
-            <Link className="text-red-900 text-xl underline" to={'/signup'}>
-              Create Account
+            <span>I Have Account?</span>{' '}
+            <Link className="text-red-900 text-xl underline" to={'/login'}>
+              Login
             </Link>
-            <br />
-            By signing up you agree to our
+            <br /> By signing up you agree to our{' '}
             <a href="#" className="text-primary">
               Terms of Service
             </a>
